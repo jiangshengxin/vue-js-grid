@@ -185,7 +185,13 @@ export default {
     },
 
     sortList (itemIndex, gridPosition) {
-      let targetItem = this.list.find(item => item.index === itemIndex)
+      //let targetItem = this.list.find(item => item.index === itemIndex)
+        var targetItem = {}
+        var itemLength = this.list.length;
+        for (var i = 0 ; i < itemLength ; i++) {
+            if (this.list[i].index === itemIndex) {
+                targetItem = this.list[i];
+            }
       let targetItemSort = targetItem.sort
 
       /*
